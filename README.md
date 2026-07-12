@@ -14,6 +14,7 @@ Connected the pin 10 as Rx (just listening) with the signal (the white) wire and
 <br>
 The lcd pcb basic connection is through 3 wires: (48+ve)red, (0-ve)black, (+3.3v UART signal)white. Also i think that the battery indicator is in the lcd screen it self not sent in the frame. 
 
+<br>
 <img width="400" height="500" alt="IMG_4962" src="https://github.com/user-attachments/assets/5c2f7fdb-43f5-42db-a6b0-69e217be81ee" />
 <br>
 
