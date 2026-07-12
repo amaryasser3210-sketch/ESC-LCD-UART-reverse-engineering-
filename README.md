@@ -16,7 +16,7 @@ The lcd pcb basic connection is through 3 wires: (48+ve)red, (0-ve)black, (+3.3v
 
 I tried manually changing some paramteres and watch the bytes change. like the gears, check engine indicator and speed and then realized that the frame size is **49 Byte** and has a consistent footer 0x00 fixed. also the values of all bytes changes between fixed values like 0x08, 0xE8, 0x0f, 0xEF. that fixed readings is a good news.  
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/303a110d-37c0-4793-b4e8-507928c48995" />
-
+<br>
 After many readings aquishing i noticed that
 byte[19] is for gears: 0x08 G1 | 0xE8 G2 | 0x0F G3
 byte[18] i think indicates when motor slows down: 0xE8 None | 0xEF Decelerating
