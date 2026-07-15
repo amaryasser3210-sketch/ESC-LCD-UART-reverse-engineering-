@@ -23,9 +23,20 @@ I tried manually changing some paramteres and watch the bytes change. like the g
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/303a110d-37c0-4793-b4e8-507928c48995" />
 <br>
 
-After many readings aquishing i noticed that
-byte[19] is for gears: 0x08 G1 | 0xE8 G2 | 0x0F G3
-byte[18] i think indicates when motor slows down: 0xE8 None | 0xEF Decelerating
-byte[16] is for Ready:  0x08 ON | 0xE8 OFF
-byte[12] is for check engine:  0xE8 ON | 0x08 OFF
-byte[47] i think is a checksum
+After many readings aquishing I noticed that output:<br>
+
+byte[19] is for gears: 0x08 G1 | 0xE8 G2 | 0x0F G3<br>
+byte[18] i think indicates when motor slows down: 0xE8 None | 0xEF Decelerating<br>
+byte[16] is for Ready:  0x08 ON | 0xE8 OFF<br>
+byte[12] is for check engine:  0xE8 ON | 0x08 OFF<br>
+byte[47] i think is a checksum<br>
+<br>
+You will ask where is speed and battery, I will tell you speed bytes is still in decoding as it is not a direct value.<br>
+About the battery, The battery percentage is not included in the serial massage otherwise the lcd has a voltage divider and calculate it independently.
+
+After trancing the LEDs in the lcd i found a chip called **C8135QP** it's function is a serial driver for the LEDs. (in short instead of using plenty of the controller GPIOs instead it sends a BCD serial stream for the driver and the driver turns the LEDs ON and OFF and adjust the brightness.
+
+<img width="350" height="450" alt="LEDs Serial Driver connection" src="https://github.com/user-attachments/assets/002ddbc6-93ef-47de-b4b9-f1f4f56fe448" />
+
+As you see in this pic the right ic is the MCU. the **pin number 1** is the Serial data going to Driver number 1 and driver number 1 connected with driver number 2
+
