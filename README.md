@@ -34,7 +34,7 @@ byte[47] i think is a checksum<br>
 You will ask where is speed and battery, I will tell you speed bytes is still in decoding as it is not a direct value.<br>
 About the battery, The battery percentage is not included in the serial massage otherwise the lcd has a voltage divider and calculate it independently.
 
-After trancing the LEDs in the lcd i found a chip called **C8135QP** it's function is a serial driver for the LEDs. (in short instead of using plenty of the controller GPIOs instead it sends a BCD serial stream for the driver and the driver turns the LEDs ON and OFF and adjust the brightness.
+After trancing the LEDs in the lcd i found a chip called **C8135QP** it's function is a serial driver for the LEDs. (in short instead of using plenty of the controller GPIOs instead it sends a BCD serial stream for the driver and the driver turns the LEDs ON and OFF and adjust the brightness).
 
 <img width="350" height="450" alt="LEDs Serial Driver connection" src="https://github.com/user-attachments/assets/002ddbc6-93ef-47de-b4b9-f1f4f56fe448" />
 
