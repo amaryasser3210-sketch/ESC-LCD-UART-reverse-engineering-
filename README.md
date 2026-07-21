@@ -29,7 +29,7 @@ byte[19] is for gears: 0x08 G1 | 0xE8 G2 | 0x0F G3<br>
 byte[18] i think indicates when motor slows down: 0xE8 None | 0xEF Decelerating<br>
 byte[16] is for Ready:  0x08 ON | 0xE8 OFF<br>
 byte[12] is for check engine:  0xE8 ON | 0x08 OFF<br>
-byte[47] i think is a checksum<br>
+byte[48] i think is a checksum<br>
 <br>
 You will ask where is speed and battery, I will tell you speed bytes is still in decoding as it is not a direct value.<br>
 About the battery, The battery percentage is not included in the serial massage otherwise the lcd has a voltage divider and calculate it independently.
